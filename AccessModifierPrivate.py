@@ -1,0 +1,17 @@
+class Employee:
+    def __init__(self, name, salary, department):
+        # private attribute
+        self._name = name  # protected
+        self.__salary = salary
+        self.__department = department
+
+    # private method
+    def _showData(self):
+        print('ชื่อพนักงาน = {}'.format(self._name))
+        print('เงินเดือน = {}'.format(self.__salary))
+        print('แผนก = {}'.format(self.__department))
+
+emp1 = Employee('วิบูลย์', 50000, 'วิชาการ')
+emp1._name = 'เรณู'
+emp1.__salary = 70000
+emp1._showData()
